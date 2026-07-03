@@ -1,0 +1,1 @@
+alert tcp any any -> any 80 (msg:"HTTP host marker"; flow:to_server,established; content:"Host:"; nocase; sid:100001; rev:1; classtype:policy-violation; priority:2;)
